@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Implicit_Intent</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="Send_SMS">Send_SMS</string>
+    <string name="SMS">SMS</string>
+    <string name="dail">Dail</string>
+</resources>
