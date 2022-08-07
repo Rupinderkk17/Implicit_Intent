@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         btnMessage.setOnClickListener {
             var intent= Intent(Intent.ACTION_SENDTO)
-            intent.data= Uri.parse("sms:goodluck")
+            intent.data= Uri.parse("sms:9815400317")
             startActivity(intent)
         }
 
@@ -36,9 +36,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnEmail.setOnClickListener {
-            var intent=Intent(Intent.ACTION_VIEW)
-            intent.data=Uri.parse("email: khuranaishakaur17@gmail.com ")
-            startActivity(intent)
+            var intent=Intent(Intent.ACTION_SENDTO)
+            intent.flags=Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.type="vnd.android.cursor.item/email"
+            intent.putExtra(Intent.EXTRA_EMAIL, arrayOf("abc@xyz.com"))
+            intent.putExtra(Intent.EXTRA_SUBJECT,"MY EMAIL SUBJECT")
+            intent.putExtra(Intent.EXTRA_TEXT,"MY EMAIL CONTENT")
+            startActivity(Intent.createChooser(intent,"SEND MAIL"))
+            
+
         }
 
         btnShare.setOnClickListener {
@@ -48,4 +54,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    }
+
+}

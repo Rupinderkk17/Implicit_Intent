@@ -4,4 +4,6 @@
     <string name="Send_SMS">Send_SMS</string>
     <string name="SMS">SMS</string>
     <string name="dail">Dail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
